@@ -3,3 +3,40 @@ textarea {
     height: 80vh;
     width: 50vw;
 }
+
+header {
+    width: 100%;
+    background-color:#1f1f24;
+    color: aliceblue;
+}
+
+.name {
+    
+    padding:25px;
+    font-size:30px;
+    text-align: center;
+}
+
+.playingfield{
+    max-width: 100%;
+    margin:20px;
+    vertical-align: middle;
+}
+    
+.field {
+    vertical-align: middle;
+    text-align: center;
+    border-width: 20px;
+    border-color:white;
+    background-color: rgb(1, 1, 48);
+    color:  aliceblue;
+    max-width:31%;
+    margin: 10px;
+}
+
+.form-group {
+    float: left;
+    position: relative;
+    max-width: 75%;
+    left: 37.5%;
+}
