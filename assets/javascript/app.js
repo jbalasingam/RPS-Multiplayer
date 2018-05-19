@@ -39,6 +39,8 @@ database.ref().on('child_added', function(childsnapshot) {
 $("#submitMessage").on('click', function(event) {
     event.preventDefault();
 
+    $('#mList').scrollTop($('#mList')[0].scrollHeight);    
+
     var username = $("#username").val();
     var message = $("#message").val();
 

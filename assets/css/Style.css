@@ -1,7 +1,6 @@
 textarea {
     resize: none;
-    height: 80vh;
-    width: 50vw;
+    height: 30vh;
 }
 
 header {
@@ -30,13 +29,21 @@ header {
     border-color:white;
     background-color: rgb(1, 1, 48);
     color:  aliceblue;
-    max-width:31%;
+    max-width:31.5%;
     margin: 10px;
 }
 
 .form-group {
     float: left;
     position: relative;
-    max-width: 75%;
-    left: 37.5%;
+    max-width: 100%;
+    left: 50%;
+}
+
+.startText {
+    position: relative;
+    padding:35px;
+    vertical-align: middle;
+    text-align: center;
+    font-size:30px;
 }
