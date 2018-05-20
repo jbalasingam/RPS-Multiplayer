@@ -19,27 +19,28 @@
 
 <body>
     <header>
-            <div class="container col-sm-12" width>
-                <div class="row">
-                    <p class="name col-sm-12 "> Rock Paper Scissors </p>
-                </div>
-            </div>
+        <p class="name"> Rock Paper Scissors </p>
     </header>
 
-    <div class="container startText">
-                Press Start to Begin: 
+    <div class="container-fluid startText">
+                Enter Username to Begin: 
+                        <input id="username" type="text" />
                 <button type="button" class="btn btn-danger buttonStart">Start</button>
     </div>
 
-
-
-    <div class="container playingfield">
+    <div class="container-fluid playingfield">
         <div class="row col-sm-12">
                 <div class="jumbotron jumbo1 col-sm-4 field">     
                             <h1 class="display-3">Player1</h1>
                 </div>
-                <div class="jumbotron jumbo2 col-sm-4 field">     
-                            <h1 class="display-3">Jumbo</h1>
+                <div class="jumbotron jumbo2 col-sm-4 field"> 
+                        <button type="button" class="btn btn-danger buttonRock buttonOption">Rock</button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-danger buttonPaper buttonOption">Paper</button>
+                        <br>
+                        <br>
+                        <button type="button" class="btn btn-danger buttonScissors buttonOption">Scissors</button>
                 </div>
                 <div class="jumbotron jumbo3 col-sm-4 field">     
                             <h1 class="display-3">Player2</h1>
@@ -51,18 +52,14 @@
 
 
     <div class="container chat">
-            <div class="row col-sm-12">
                 <form>
                     <div class="form-group">
                         <textarea id="mList" readonly class="form-control"></textarea>
-                        <label>Username: </label>
-                        <input id="username" type="text" />
                         <label>Message: </label>
-                        <input id="message" type="text" />
-                        <button id="submitMessage" type="submit">Submit</button>
+                        <input id="message" class="message" type="text" />
+                        <button type="button" class="btn btn-success"  id="submitMessage" type="submit">Enter</button>
                     </div>
                 </form>
-        </div>
     </div>
 
         <script src="assets/javascript/app.js"></script>

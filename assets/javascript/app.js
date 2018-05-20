@@ -1,17 +1,4 @@
-/* 
-
-1. Connect to our database
-2. Get the default data
-3. Display the message to the user
-
-4. Capture our submit button click 
-5. Add message details to database
-6. Display the message to the user
-
-*/
-
-var messageList = $('#mList');
-
+$(document).ready(function () {
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyCvl1YlUHqhBaY3MMm5TvZfBrSEifAJTqs",
@@ -23,8 +10,42 @@ var config = {
 };
 
 firebase.initializeApp(config);
-
 var database = firebase.database();
+
+// Set all variables that will be used
+var p1Username;
+
+var con;
+var player = {
+    number: '0',
+    name: '',
+    wins: 0,
+    losses: 0,
+    turns: 0,
+    choice: ''
+};
+
+var opponent = {
+    number: '0',
+    name: '',
+    wins: 0,
+    losses: 0,
+    turns: 0,
+    choice: ''
+};
+var waiting = false;
+
+
+
+//Make sure Chat is always scrolled down to the bottom
+window.setInterval(function() {
+    var elem = document.getElementById('mList');
+    elem.scrollTop = elem.scrollHeight;
+  },10);
+
+var messageList = $('#mList');
+
+
 
 database.ref().on('value', function(snapshot) {
     // console.log(snapshot.val());
@@ -36,19 +57,63 @@ database.ref().on('child_added', function(childsnapshot) {
     messageList.text(`${previousText}\n${childsnapshot.val().username}: ${childsnapshot.val().message}`);
 });
 
+
+
+
+
+
+
+
+
+
 $("#submitMessage").on('click', function(event) {
     event.preventDefault();
 
     $('#mList').scrollTop($('#mList')[0].scrollHeight);    
 
-    var username = $("#username").val();
+    var username = p1Username;
     var message = $("#message").val();
 
     console.log(username);
     console.log(message);
 
     database.ref().push({
-        username: username,
+        username: p1Username,
         message: message
     })
+});
+
+
+$(".buttonStart").on('click', function(event) {
+
+    p1Username = $("#username").val();
+    console.log(p1Username);
+    $(".startText").hide();
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 });

@@ -1,6 +1,8 @@
 textarea {
     resize: none;
     height: 30vh;
+    max-width: 100%;
+    background-color:blue;
 }
 
 header {
@@ -10,22 +12,19 @@ header {
 }
 
 .name {
-    
     padding:25px;
-    font-size:30px;
+    font-size:55px;
     text-align: center;
 }
 
 .playingfield{
     max-width: 100%;
-    margin:20px;
     vertical-align: middle;
 }
     
 .field {
     vertical-align: middle;
     text-align: center;
-    border-width: 20px;
     border-color:white;
     background-color: rgb(1, 1, 48);
     color:  aliceblue;
@@ -33,17 +32,17 @@ header {
     margin: 10px;
 }
 
-.form-group {
-    float: left;
-    position: relative;
-    max-width: 100%;
-    left: 50%;
-}
-
 .startText {
-    position: relative;
     padding:35px;
     vertical-align: middle;
     text-align: center;
     font-size:30px;
+}
+
+.message {
+    width:88%;
+}
+
+.buttonOption{
+    font-size:35px;
 }
