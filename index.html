@@ -20,6 +20,7 @@
 <body>
     <header>
         <p class="name"> Rock Paper Scissors </p>
+        <h2 class="alert alert-danger waitYourTurn">Error: Two players are already playing. Please come back later.</h2>
     </header>
 
     <div class="container-fluid startText">
@@ -52,7 +53,7 @@
 
 
     <div class="container chat">
-                <form>
+                <form onSubmit="return false;">
                     <div class="form-group">
                         <textarea id="mList" readonly class="form-control"></textarea>
                         <label>Message: </label>
